@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="borrowDetails" targetNamespace="http://tempuri.org/borrowDetails.xsd" xmlns:mstns="http://tempuri.org/borrowDetails.xsd" xmlns="http://tempuri.org/borrowDetails.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PhysicalEducationConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PhysicalEducationConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PhysicalEducationManagement_System.Properties.Settings.GlobalReference.Default.PhysicalEducationConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PhyManSysConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PhyManSysConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PhysicalEducationManagement_System.Properties.Settings.GlobalReference.Default.PhyManSysConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BorrowedTableAdapter" GeneratorDataComponentClassName="BorrowedTableAdapter" Name="Borrowed" UserDataComponentName="BorrowedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PhyManSysConnectionString (Settings)" DbObjectName="dbo.Borrowed" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Borrowed.*
+FROM     Borrowed INNER JOIN
+                  Instrument ON Borrowed.InsID = Instrument.InsID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="InsID" DataSetColumn="InsID" />
+              <Mapping SourceColumn="RegNo" DataSetColumn="RegNo" />
+              <Mapping SourceColumn="Borrow_Date" DataSetColumn="Borrow_Date" />
+              <Mapping SourceColumn="Borrow_Time" DataSetColumn="Borrow_Time" />
+              <Mapping SourceColumn="Return_Date" DataSetColumn="Return_Date" />
+              <Mapping SourceColumn="Return_Time" DataSetColumn="Return_Time" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="borrowDetails" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="borrowDetails" msprop:Generator_UserDSName="borrowDetails">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Borrowed" msprop:Generator_TableClassName="BorrowedDataTable" msprop:Generator_TableVarName="tableBorrowed" msprop:Generator_TablePropName="Borrowed" msprop:Generator_RowDeletingName="BorrowedRowDeleting" msprop:Generator_RowChangingName="BorrowedRowChanging" msprop:Generator_RowEvHandlerName="BorrowedRowChangeEventHandler" msprop:Generator_RowDeletedName="BorrowedRowDeleted" msprop:Generator_UserTableName="Borrowed" msprop:Generator_RowChangedName="BorrowedRowChanged" msprop:Generator_RowEvArgName="BorrowedRowChangeEvent" msprop:Generator_RowClassName="BorrowedRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InsID" msprop:Generator_ColumnVarNameInTable="columnInsID" msprop:Generator_ColumnPropNameInRow="InsID" msprop:Generator_ColumnPropNameInTable="InsIDColumn" msprop:Generator_UserColumnName="InsID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegNo" msprop:Generator_ColumnVarNameInTable="columnRegNo" msprop:Generator_ColumnPropNameInRow="RegNo" msprop:Generator_ColumnPropNameInTable="RegNoColumn" msprop:Generator_UserColumnName="RegNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Borrow_Date" msprop:Generator_ColumnVarNameInTable="columnBorrow_Date" msprop:Generator_ColumnPropNameInRow="Borrow_Date" msprop:Generator_ColumnPropNameInTable="Borrow_DateColumn" msprop:Generator_UserColumnName="Borrow_Date">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Borrow_Time" msprop:Generator_ColumnVarNameInTable="columnBorrow_Time" msprop:Generator_ColumnPropNameInRow="Borrow_Time" msprop:Generator_ColumnPropNameInTable="Borrow_TimeColumn" msprop:Generator_UserColumnName="Borrow_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Return_Date" msprop:Generator_ColumnVarNameInTable="columnReturn_Date" msprop:Generator_ColumnPropNameInRow="Return_Date" msprop:Generator_ColumnPropNameInTable="Return_DateColumn" msprop:Generator_UserColumnName="Return_Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Return_Time" msprop:Generator_ColumnVarNameInTable="columnReturn_Time" msprop:Generator_ColumnPropNameInRow="Return_Time" msprop:Generator_ColumnPropNameInTable="Return_TimeColumn" msprop:Generator_UserColumnName="Return_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

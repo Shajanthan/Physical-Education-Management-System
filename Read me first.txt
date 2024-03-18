@@ -1,0 +1,17 @@
+***-----step 1-----**
+Copy PEMS Folder into your C drive
+
+***-----step 2-----***
+1.Open PhysicalEducationManagementSystem in visual Studio
+2.Server Explorer--->Data Connection---->Right Click---->Add Connection--->Browse
+3.Select our location C PEMS Folder and select PhyManSys.mdf file
+4.Then Click ok.
+5.Run the Application
+
+****-------*****
+username - Admin
+password - admin123
+
+//For use
+install ReportViewer
+run exe file
